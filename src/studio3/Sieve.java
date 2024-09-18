@@ -12,14 +12,19 @@ public class Sieve {
 	
 		for (int i = 2; i <= n; i++){
 		sieve[i] = true;
-		if (n % 2 == 1) {
-			int byTwo = n/2 ;
-			
+		
+		for (int j= i * i; j <= n; j += i) {
+			sieve[i] = false;
+			}
+			for (int k= i * 5; k <= n; k += i) {
+				sieve[i] = false;
+			}
+		}
+		
 }
 		
 		
 		
-		}
-
-	}
+		
+	
 }
